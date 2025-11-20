@@ -1,16 +1,14 @@
-# Python
-__pycache__/
-*.pyc
-
-# Virtual env
-venv/
-
-# Local environment files
+# Ignore environment file
 .env
 
-# Matplotlib cache
-.matplotlib/
+# Ignore Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
 
-# OS/Editor junk
-.DS_Store
-*.swp
+# Allow images folder to be tracked
+# (remove or comment out this line if it exists)
+# images/*.png
+
