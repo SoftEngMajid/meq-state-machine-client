@@ -1,14 +1,9 @@
-# Ignore environment file
 .env
-
-# Ignore Python cache
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 .venv/
-
-# Allow images folder to be tracked
-# (remove or comment out this line if it exists)
-# images/*.png
+venv/
+.idea/
 
