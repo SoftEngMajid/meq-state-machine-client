@@ -1,8 +1,19 @@
-# MEQ State Machine Client – Skeleton
+# MEQ State Machine Client – Full Solution
 
-This branch contains the **initial skeleton setup** for the MEQ client.  
-It provides the basic environment and dependency configuration.  
-The full solution is available in the `state_machine` branch.
+This branch contains the **complete solution** for the MEQ challenge. 
+It implements a TCP client that communicates with the MEQ server using LF‑terminated commands, explores all reachable states, and produces a clear summary of transitions along with a rendered diagram.
+
+---
+
+## Features
+- LF‑terminated TCP client (`client.py`) 
+- Environment‑based server configuration (`.env`) 
+- Directed graph visualization (`visualize.py`) 
+- Deduplicated edges for clean diagrams 
+- Diagram output (`images/state_machine.png`) 
+- Clear branching strategy: 
+  - `main` → skeleton setup 
+  - `state_machine` → full solution 
 
 ---
 
@@ -41,28 +52,63 @@ These are listed in `requirements.txt`.
 
 ---
 
-## Environment Variables
+## Environment Configuration
 
-The client requires server details to be provided via environment variables.  
-Create a `.env` file in the project root with the following values:
+Create a `.env` file in the project root:
 
 ```
 SERVER_IP=4.197.189.229
 SERVER_PORT=65432
 ```
 
-`.env` is ignored by Git for security.  
-Use `.env.example` in the `state_machine` branch as a template.
+`.env` is ignored by Git for security. 
+Use `.env.example` as a safe template for reviewers.
 
 ---
 
-## Branches
+## Running the Client
 
-- `main` → skeleton setup (this branch)  
-- `state_machine` → full solution with client logic, visualization, and diagram  
+Run the client to explore the state machine:
+
+```bash
+python3 client.py
+```
+
+The program will:
+- Connect to the server 
+- Explore all possible transitions 
+- Print each transition in the format: 
+  ```
+  [Transition] A --(1)--> N
+  ```
+- At the end, print a structured summary of each state, including: 
+  - Actions tried 
+  - Shortest entry path 
+  - Shortest exit path 
 
 ---
 
-This skeleton branch ensures reviewers can set up the environment, install dependencies, and understand the branch structure, while the full solution lives in `state_machine`.
+## Visualizing the State Machine
+
+After running the client, a diagram is generated automatically:
+
+- Output file: `images/state_machine.png`
+
+The diagram shows:
+- States as rounded boxes 
+- Transitions labeled with action numbers 
+- Left‑to‑right layout for readability 
+- Deduplicated edges for clarity 
+
+---
+
+## Files in This Branch
+- `client.py` → TCP client logic, exploration, and summary 
+- `visualize.py` → Graphviz rendering with deduplication 
+- `README.md` → Full documentation 
+- `requirements.txt` → Python dependencies (`networkx`, `python-dotenv`, `pygraphviz`) 
+- `.gitignore` → excludes `.env`, caches, IDE files 
+- `.env.example` → safe template for server IP/Port 
+- `images/state_machine.png` → rendered diagram 
 
 ---
