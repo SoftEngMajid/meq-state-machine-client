@@ -107,7 +107,7 @@ The diagram shows:
 - `README.md` → Full documentation 
 - `requirements.txt` → Python dependencies (`networkx`, `python-dotenv`, `pygraphviz`) 
 - `.gitignore` → excludes `.env`, caches, IDE files 
-- `.env.example` → safe template for server IP/Port 
+- `.env` → template for server IP/Port
 - `images/state_machine.png` → rendered diagram 
 
 ---
