@@ -29,7 +29,7 @@ sudo apt install -y git python3 python3-venv python3-pip graphviz graphviz-dev
 Clone the repository and set up a virtual environment:
 
 ```bash
-git clone https://github.com/<your-username>/meq-state-machine-client.git
+git clone https://github.com/SoftEngMajid/meq-state-machine-client.git
 cd meq-state-machine-client
 python3 -m venv venv
 source venv/bin/activate
