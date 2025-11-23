@@ -62,7 +62,6 @@ SERVER_PORT=65432
 ```
 
 `.env` is ignored by Git for security. 
-Use `.env.example` as a safe template for reviewers.
 
 ---
 
